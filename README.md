@@ -13,7 +13,7 @@ The code has been tested running under Python 3.5.2. The required packages are a
 ## Example to Run the Codes
 The instruction of commands has been clearly stated in the codes.
 - Kwai dataset  
-```python main.py --l_r=0.0001 --weight_decay=0.1 --dropout=0 --weight_mode=confid --num_routing=3 --is_pruning=False --data_path=Kwai```
+```python main.py --l_r=0.0001 --weight_decay=0.1 --dropout=0 --weight_mode=confid --num_routing=3 --is_pruning=False --data_path=Kwai --has_a=False --has_t=False```
 - Tiktok dataset  
 `python main.py --l_r=0.0001 --weight_decay=0.001 --dropout=0 --weight_mode=confid --num_routing=3 --is_pruning=False --data_path=Tiktok`
 - Movielens dataset  
@@ -27,7 +27,7 @@ Some important arguments:
   2. `max` implements the max integration without confidence vectors. Usage `--weight_model 'max'`
   3. `confid` (by default)  implements the max integration with confidence vectors. Usage `--weight_model 'confid'`
   
- - `fusion_mode` 
+- `fusion_mode` 
   It specifics the type of user and item representation in the prediction layer. Here we provide three options:  
   1. `concat` (by default) implements the concatenation of multimodal features. Usage `--fusion_mode 'concat'`
   2. `mean` implements the mean pooling of multimodal features. Usage `--fusion_mode 'max'`
@@ -39,6 +39,8 @@ Some important arguments:
   1. `Ture` (by default) implements the hard pruning operations. Usage `--is_pruning 'True'`
   2. `False` implements the soft pruning operations. Usage `--is_pruning 'False'`
   
+- 'has_v', 'has_a', and 'has_t' indicate the modality used in the model.
+
 ## Dataset
 We follow [MMGCN](https://github.com/weiyinwei/MMGCN) and provide three processed datasets: Kwai, Tiktok, and Movielnes.  
 
