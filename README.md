@@ -46,7 +46,6 @@ We follow [MMGCN](https://github.com/weiyinwei/MMGCN) and provide three processe
 
 ||#Interactions|#Users|#Items|Visual|Acoustic|Textual|
 |:-|:-|:-|:-|:-|:-|:-|
-
 |Movielens|1,239,508|55,485|5,986|2,048|128|100|
 |Tiktok|726,065|36,656|76,085|128|128|128|
 |Kwai|298,492|86,483|7,010|2,048|-|-|
